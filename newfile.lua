@@ -174,6 +174,24 @@ game:GetService("ReplicatedStorage"):WaitForChild("CrucifyEntityEvent"):FireServ
 	end	  
 })
 TTab:AddButton({
+	Name = "Crucifix Screech",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Crucifix")
+wait(0.25)
+local plrx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X
+local plry = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y + 1
+local plrz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z
+local args = {
+    [1] = "Screech",
+    [2] = CFrame.new(plrx, plry, plrz, 0.499999523, 0, -0.866023064, 0, 1, 0, 0.866022766, 0, 0.499999136),
+    [3] = game.Players.LocalPlayer.Character.Crucifix
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CrucifyEntityEvent"):FireServer(unpack(args))
+
+	end	  
+})
+TTab:AddButton({
 	Name = "Kill All (In Game) (FE)",
 	Callback = function(Value)
 for i,v in pairs(game.Players:GetChildren()) do
