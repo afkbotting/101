@@ -72,6 +72,19 @@ game.ReplicatedStorage.ReviveEvent:FireServer()
 	end	  
 })
 GTab:AddLabel("Used to bypass you can revive only once.")
+GTab:AddButton({
+	Name = "Get 30 Door Code (Will be in ur clipboard)",
+	Callback = function(Value)
+local first = game.Workspace.ShapeCode1.Value
+local second = game.Workspace.ShapeCode2.Value
+local ed = game.Workspace.ShapeCode3.Value
+local fd = game.Workspace.ShapeCode4.Value
+
+setclipboard(first.Num.Value..second.Num.Value..ed.Num.Value..fd.Num.Value)
+	end	  
+})
+
+GTab:AddLabel("Put from ur clipboard code to chat.")
 local ITab = Window:MakeTab({
     Name = "Items",
     Icon = "rbxassetid://4483345998",
@@ -135,6 +148,68 @@ ITab:AddButton({
 	Name = "Give NVS-35 (Tablet)",
 	Callback = function(Value)
 game.ReplicatedStorage.GetItem:FireServer("NVS-35")
+	end	  
+})
+local TTab = Window:MakeTab({
+    Name = "Trolling",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+TTab:AddButton({
+	Name = "Crucifix Screech",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Crucifix")
+wait(0.25)
+local plrx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X
+local plry = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y + 1
+local plrz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z
+local args = {
+    [1] = "Screech",
+    [2] = CFrame.new(plrx, plry, plrz, 0.499999523, 0, -0.866023064, 0, 1, 0, 0.866022766, 0, 0.499999136),
+    [3] = game.Players.LocalPlayer.Character.Crucifix
+TTab:AddButton({
+	Name = "Crucifix Halt",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Crucifix")
+wait(0.25)
+local plrx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.X
+local plry = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y + 1
+local plrz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Z
+local args = {
+    [1] = "Halt",
+    [2] = CFrame.new(plrx, plry, plrz, 0.499999523, 0, -0.866023064, 0, 1, 0, 0.866022766, 0, 0.499999136),
+    [3] = game.Players.LocalPlayer.Character.Crucifix
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("CrucifyEntityEvent"):FireServer(unpack(args))
+
+	end	  
+})
+TTab:AddButton({
+	Name = "Kill All (In Game) (FE)",
+	Callback = function(Value)
+for i,v in pairs(game.Players:GetChildren()) do
+game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, 100)
+end
+})
+TTab:AddTextbox({
+	Name = "Damage All",
+	Default = "10",
+	TextDisappear = true,
+	Callback = function(Value)
+for i,v in pairs(game.Players:GetChildren()) do
+game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, Value)
+end
+	end	  
+})
+TTab:AddTextbox({
+	Name = "Heal All",
+	Default = "10",
+	TextDisappear = true,
+	Callback = function(Value)
+for i,v in pairs(game.Players:GetChildren()) do
+game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, tonumber("-"..Value))
+end
 	end	  
 })
 OrionLib:Init()
