@@ -167,6 +167,10 @@ local args = {
     [1] = "Screech",
     [2] = CFrame.new(plrx, plry, plrz, 0.499999523, 0, -0.866023064, 0, 1, 0, 0.866022766, 0, 0.499999136),
     [3] = game.Players.LocalPlayer.Character.Crucifix
+
+game:GetService("ReplicatedStorage"):WaitForChild("CrucifyEntityEvent"):FireServer(unpack(args))
+end
+})
 TTab:AddButton({
 	Name = "Crucifix Halt",
 	Callback = function(Value)
