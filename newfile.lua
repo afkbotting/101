@@ -71,5 +71,71 @@ GTab:AddButton({
 game.ReplicatedStorage.ReviveEvent:FireServer()
 	end	  
 })
-GTab:AddLabel("Revive button can get to negative revives. Use Gain Revive Before Executing.")
+GTab:AddLabel("Used to bypass you can revive only once.")
+local ITab = Window:MakeTab({
+    Name = "Items",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+ITab:AddButton({
+	Name = "Give Flashlight",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Flashlight")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Paper (From door 30)",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Paper")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give BlackKey",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("BlackKey")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Crucifix",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Crucifix")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Vitamins",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Vitamins")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Gummy Flashlight",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("ShakeLight")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Candle",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Candle")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Lighter",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Lighter")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give Lockpick (Opens blocked door.)",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("Lockpick")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give NVS-35 (Tablet)",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("NVS-35")
+	end	  
+})
 OrionLib:Init()
+
