@@ -176,9 +176,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("CrucifyEntityEvent"):FireServ
 TTab:AddButton({
 	Name = "Kill All (In Game) (FE)",
 	Callback = function(Value)
-for i,v in pairs(game.Players:GetChildren()) do
+for i,v in  pairs(game.Players:GetChildren()) do
 game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, 100)
 end
+ end
 })
 TTab:AddTextbox({
 	Name = "Damage All",
@@ -201,4 +202,3 @@ end
 	end	  
 })
 OrionLib:Init()
-
