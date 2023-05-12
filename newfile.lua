@@ -179,6 +179,7 @@ TTab:AddButton({
 for i,v in pairs(game.Players:GetChildren()) do
 game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, 100)
 end
+end
 })
 TTab:AddTextbox({
 	Name = "Damage All",
