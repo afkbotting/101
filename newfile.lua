@@ -19,7 +19,7 @@ LTab:AddTextbox({
     end      
 })
 LTab:AddButton({
-    Name = "Destroy Lobby (FE)",
+    Name = "Spawn Rotating Blocks (FE)",
     Callback = function()
               for i,v in pairs(game.Workspace:GetDescendants()) do
 local args = {
@@ -32,7 +32,20 @@ wait(0.1)
 end
 end    
 })
-LTab:AddLabel("It teleport to you parts that rotates.")
+LTab:AddButton({
+    Name = "Spawn Rotating Blocks (INSTANTLY)",
+    Callback = function()
+              for i,v in pairs(game.Workspace:GetDescendants()) do
+local args = {
+    [1] = game.Players.LocalPlayer.Character,
+    [2] = v
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
+end
+end    
+})
+
 LTab:AddButton({
     Name = "Kill All (FE)",
     Callback = function()
@@ -46,6 +59,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(a
 end
       end    
 
+})
+LTab:AddButton({
+    Name = "Destroy Elevators (FE)",
+    Callback = function()
+              for i,v in pairs(game.Workspace.Lobbys:GetChildren()) do
+local args = {
+    [1] = game.Players.LocalPlayer.Character,
+    [2] = v.OutPosition
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
+end
+end    
 })
 OrionLib:Init()
 
