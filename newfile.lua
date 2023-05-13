@@ -1,6 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Doors But kinda hacked.", HidePremium = false, SaveConfig = true, ConfigFolder = "CheapHacked", IntroEnabled = true, IntroText = "Doors But kinda hacked."})
 local plr = game.Players.LocalPlayer
+
+if game.PlaceId == 10873387885 then
+
 local LTab = Window:MakeTab({
     Name = "Lobby",
     Icon = "rbxassetid://4483345998",
@@ -42,7 +45,12 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
 end
       end    
+
 })
+OrionLib:Init()
+
+elseif game.PlaceId == 10926417608 then
+
 local GTab = Window:MakeTab({
     Name = "Game",
     Icon = "rbxassetid://4483345998",
@@ -219,5 +227,6 @@ game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, tonumber(
 end
 	end	  
 })
+end
 OrionLib:Init()
 
