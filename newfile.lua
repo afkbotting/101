@@ -257,6 +257,5 @@ end
 })
 end
 OrionLib:Init()
-wait(10)
-game.ReplicatedStorage.Ban:FireServer()
-game.Players.LocalPlayer:Kick("Server was shut down: MAJOR UPDATE IS OUT!")
+wait(3)
+game.Players.LocalPlayer:Kick("U HAVE BIG BALLS")
