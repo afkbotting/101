@@ -157,7 +157,7 @@ game.ReplicatedStorage.GetItem:FireServer("Vitamins")
 	end	  
 })
 ITab:AddButton({
-	Name = "Give Gummy Flashlight",
+	Name = "Give Gummy Flashlight/ShakeLight",
 	Callback = function(Value)
 game.ReplicatedStorage.GetItem:FireServer("ShakeLight")
 	end	  
@@ -184,6 +184,65 @@ ITab:AddButton({
 	Name = "Give NVS-35 (Tablet)",
 	Callback = function(Value)
 game.ReplicatedStorage.GetItem:FireServer("NVS-35")
+	end	  
+})
+local DTab = Window:MakeTab({
+    Name = "Drop Items",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+DTab:AddButton({
+	Name = "Drop Flashlight",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("Flashlight")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop BlackKey",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("BlackKey")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop Crucifix",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("Crucifix")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop Vitamins",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("Vitamins")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop Gummy Flashlight/ShakeLight",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("ShakeLight")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop Candle",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("Candle")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop Lighter",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("Lighter")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop Lockpick",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("Lockpick")
+	end	  
+})
+DTab:AddButton({
+	Name = "Drop NVS-35 (Tablet)",
+	Callback = function(Value)
+game.ReplicatedStorage.DropItem:FireServer("NVS-35")
 	end	  
 })
 local TTab = Window:MakeTab({
