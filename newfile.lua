@@ -77,7 +77,7 @@ end
 })
 OrionLib:Init()
 
-elseif game.PlaceId == 10926417608 then
+elseif game.PlaceId == 10926417608 or 12696293710 then
 
 local GTab = Window:MakeTab({
     Name = "Game",
@@ -109,7 +109,7 @@ game.ReplicatedStorage.ReviveEvent:FireServer()
 })
 GTab:AddLabel("Used to bypass you can revive only once.")
 GTab:AddButton({
-	Name = "Get 30 Door Code (Will be in ur clipboard)",
+	Name = "Get Blinded Code (Will be in ur clipboard)",
 	Callback = function(Value)
 local first = game.Workspace.ShapeCode1.Value
 local second = game.Workspace.ShapeCode2.Value
@@ -228,7 +228,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("CrucifyEntityEvent"):FireServ
 	end	  
 })
 TTab:AddButton({
-	Name = "Kill All (In Game) (FE)",
+	Name = "Kill All (FE)",
 	Callback = function(Value)
 for i,v in pairs(game.Players:GetChildren()) do
 game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, 100)
@@ -236,7 +236,7 @@ end
 end
 })
 TTab:AddTextbox({
-	Name = "Damage All",
+	Name = "Damage All (FE)",
 	Default = "10",
 	TextDisappear = true,
 	Callback = function(Value)
@@ -246,7 +246,7 @@ end
 	end	  
 })
 TTab:AddTextbox({
-	Name = "Heal All",
+	Name = "Heal All (FE) ",
 	Default = "10",
 	TextDisappear = true,
 	Callback = function(Value)
@@ -257,5 +257,3 @@ end
 })
 end
 OrionLib:Init()
-wait(3)
-game.Players.LocalPlayer:Kick("U HAVE BIG BALLS")
