@@ -14,7 +14,7 @@ local LTab = Window:MakeTab({
 
 LTab:AddTextbox({
     Name = "Bottom Text Everyone (FE)",
-    Default = "Hello! I am real dev 100%!!!!",
+    Default = "you are mafaka 😡",
     TextDisappear = true,
     Callback = function(Value)
         game.ReplicatedStorage.AddText:FireServer(Value)
