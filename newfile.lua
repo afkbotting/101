@@ -294,6 +294,14 @@ game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, 100)
 end
 end
 })
+TTab:AddButton({
+	Name = "Kill All with Ambush Jumpscare (FE)",
+	Callback = function(Value)
+for i,v in pairs(game.Players:GetChildren()) do
+game.ReplicatedStorage.DamageHumanoid:FireServer(v.Character.Humanoid, 100, "Ambush")
+end
+end
+})
 TTab:AddTextbox({
 	Name = "Damage All (FE)",
 	Default = "10",
