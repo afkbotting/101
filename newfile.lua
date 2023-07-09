@@ -1,5 +1,6 @@
+if game.Players.LocalPlayer.Name ~= "FIFI_BOYS" then
 game.Players.LocalPlayer:Kick("🤓")
-
+end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Doors But kinda hacked.", HidePremium = false, SaveConfig = true, ConfigFolder = "CheapHacked", IntroEnabled = true, IntroText = "Doors But kinda hacked. (better than kinghub maybe)"})
 local plr = game.Players.LocalPlayer
