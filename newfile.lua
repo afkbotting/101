@@ -1,3 +1,7 @@
+local TextService = game:GetService("TextService")
+
+
+
 TeleportService = game:GetService("TeleportService")
 local OrionLib = 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -13,68 +17,21 @@ local LTab = Window:MakeTab({
 })
 
 LTab:AddTextbox({
-    Name = "Bottom Text Everyone (FE)",
-    Default = "you are mafaka 😡",
+    Name = "Bottom Text Everyone",
+    Default = "hello",
     TextDisappear = true,
     Callback = function(Value)
-        game.ReplicatedStorage.AddText:FireServer(Value)
+       local filteredText = ""
+local success, errorMessage = pcall(function()
+	filteredText = TextService:FilterStringAsync(Value, plr.UserId)
+end)
+if not success then
+	warn("Error filtering text:", Value, ":", errorMessage)
+	-- Put code here to handle filter failure
+end game.ReplicatedStorage.AddText:FireServer()
     end      
 })
-LTab:AddButton({
-    Name = "Spawn Rotating Blocks (FE)",
-    Callback = function()
-              for i,v in pairs(game.Workspace:GetDescendants()) do
-local args = {
-    [1] = game.Players.LocalPlayer.Character,
-    [2] = v
-}
 
-game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
-wait(0.1)
-end
-end    
-})
-LTab:AddButton({
-    Name = "Spawn Rotating Blocks (INSTANTLY)",
-    Callback = function()
-              for i,v in pairs(game.Workspace:GetDescendants()) do
-local args = {
-    [1] = game.Players.LocalPlayer.Character,
-    [2] = v
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
-end
-end    
-})
-
-LTab:AddButton({
-    Name = "Kill All (FE)",
-    Callback = function()
-              for i,v in pairs(game.Players:GetChildren()) do
-local args = {
-    [1] = game.Players.LocalPlayer.Character,
-    [2] = game.Workspace[v.Name].Head
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
-end
-      end    
-
-})
-LTab:AddButton({
-    Name = "Destroy Elevators (FE)",
-    Callback = function()
-              for i,v in pairs(game.Workspace.Lobbys:GetChildren()) do
-local args = {
-    [1] = game.Players.LocalPlayer.Character,
-    [2] = v.OutPosition
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
-end
-end    
-})
 LTab:AddButton({
     Name = "Teleport to Super hard mode",
     Callback = function(Value)
