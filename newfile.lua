@@ -27,7 +27,7 @@ LTab:AddTextbox({
 LTab:AddButton({
     Name = "Teleport to Super hard mode",
     Callback = function(Value)
-     TeleportService:Teleport(13467727269)
+     game.Players.LocalPlayer:Kick("LITTLE SKID TRIED TO PLAY SOPER HARD MODE????? NO TODAY 😈😈😈😈")
     end      
 })
 OrionLib:Init()
