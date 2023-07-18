@@ -1,7 +1,6 @@
-if game.Players.LocalPlayer.Name ~= "FIFI_BOYS" then
-game.Players.LocalPlayer:Kick("🤓")
-end
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+TeleportService = game:GetService("TeleportService")
+local OrionLib = 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Doors But kinda hacked.", HidePremium = false, SaveConfig = true, ConfigFolder = "CheapHacked", IntroEnabled = true, IntroText = "Doors But kinda hacked. (better than kinghub maybe)"})
 local plr = game.Players.LocalPlayer
 
@@ -75,6 +74,12 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Crucify"):FireServer(unpack(args))
 end
 end    
+})
+LTab:AddButton({
+    Name = "Teleport to Super hard mode",
+    Callback = function(Value)
+     TeleportService:Teleport(13467727269)
+    end      
 })
 OrionLib:Init()
 
