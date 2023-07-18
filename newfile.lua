@@ -78,7 +78,7 @@ end
 })
 OrionLib:Init()
 
-elseif game.PlaceId == 10926417608 or 12696293710 then
+elseif game.PlaceId == 10926417608 or 12696293710 or 13467727269 then
 
 local GTab = Window:MakeTab({
     Name = "Game",
@@ -108,6 +108,7 @@ GTab:AddButton({
 game.ReplicatedStorage.ReviveEvent:FireServer()
 	end	  
 })
+if game.PlaceId ~= 13467727269 then
 GTab:AddLabel("Used to bypass you can revive only once.")
 GTab:AddButton({
 	Name = "Get Blinded Code (Will be in ur clipboard)",
@@ -117,9 +118,29 @@ local second = game.Workspace.ShapeCode2.Value
 local ed = game.Workspace.ShapeCode3.Value
 local fd = game.Workspace.ShapeCode4.Value
 
+
 setclipboard(first.Num.Value..second.Num.Value..ed.Num.Value..fd.Num.Value)
 	end	  
 })
+elseif game.PlaceId ~= 13467727269 then
+GTab:AddButton({
+	Name = "Get Blinded Code (Will be in ur clipboard)",
+	Callback = function(Value)
+local first = game.Workspace.ShapeCode1.Value
+local second = game.Workspace.ShapeCode2.Value
+local ed = game.Workspace.ShapeCode3.Value
+local fd = game.Workspace.ShapeCode4.Value
+local fq = game.Workspace.ShapeCode5.Value
+local fw = game.Workspace.ShapeCode6.Value
+local fs = game.Workspace.ShapeCode7.Value
+local fy = game.Workspace.ShapeCode8.Value
+
+
+
+setclipboard(first.Num.Value..second.Num.Value..ed.Num.Value..fd.Num.Value..fq.Num.Value..fw.Num.Value..fs.Num.Value..fy.Num.Value)
+	end	  
+})
+end
 
 GTab:AddLabel("Put from ur clipboard code to chat.")
 local ITab = Window:MakeTab({
@@ -187,6 +208,26 @@ ITab:AddButton({
 game.ReplicatedStorage.GetItem:FireServer("NVS-35")
 	end	  
 })
+if game.PlaceId == 13467727269 then
+ITab:AddButton({
+	Name = "Give Holy Hand Grenade",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("HolyHandGrenade")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give MiniShield",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("MiniShield")
+	end	  
+})
+ITab:AddButton({
+	Name = "Give LargeShield",
+	Callback = function(Value)
+game.ReplicatedStorage.GetItem:FireServer("LargeShield")
+	end	  
+})
+end
 local DTab = Window:MakeTab({
     Name = "Drop Items",
     Icon = "rbxassetid://4483345998",
