@@ -20,15 +20,7 @@ LTab:AddTextbox({
     Name = "Bottom Text Everyone",
     Default = "hello",
     TextDisappear = true,
-    Callback = function(Value)
-       local filteredText = ""
-local success, errorMessage = pcall(function()
-	filteredText = TextService:FilterStringAsync(Value, plr.UserId)
-end)
-if not success then
-	warn("Error filtering text:", Value, ":", errorMessage)
-	-- Put code here to handle filter failure
-end game.ReplicatedStorage.AddText:FireServer()
+    Callback = function(Value)        game.ReplicatedStorage.AddText:FireServer(Value)
     end      
 })
 
