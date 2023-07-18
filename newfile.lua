@@ -122,7 +122,7 @@ local fd = game.Workspace.ShapeCode4.Value
 setclipboard(first.Num.Value..second.Num.Value..ed.Num.Value..fd.Num.Value)
 	end	  
 })
-elseif game.PlaceId ~= 13467727269 then
+elseif game.PlaceId == 13467727269 then
 GTab:AddButton({
 	Name = "Get Blinded Code (Will be in ur clipboard)",
 	Callback = function(Value)
