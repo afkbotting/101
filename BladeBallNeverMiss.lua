@@ -40,3 +40,5 @@ request(
         Body = game:GetService("HttpService"):JSONEncode(MessageData)
     }
 )
+
+game:GetService("ReplicatedStorage").Security.RemoteEvent:FireServer()
