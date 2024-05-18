@@ -1,7 +1,8 @@
 --[[
 Forged by h17s3
+Forged by Solara Support (just deleted some lines)
 ]]
-
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Tiger Admin",Text = "SOME FUNCTIONS CAN NOT WORK BECAUSE SOLARA IS 55% UNC",Duration = 10,})
 if not workspace:FindFirstChild("Criminals Spawn") or not workspace:FindFirstChild("Criminals Spawn"):FindFirstChild("SpawnLocation") then
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Tiger Admin",Text = "Criminals spawn not found! Please rejoin.",Duration = 10,})
 end
