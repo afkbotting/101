@@ -3,9 +3,6 @@ Forged by h17s3
 Forged by Solara Support (just deleted some lines)
 ]]
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Tiger Admin",Text = "SOME FUNCTIONS CAN NOT WORK BECAUSE SOLARA IS 55% UNC",Duration = 10,})
-if not workspace:FindFirstChild("Criminals Spawn") or not workspace:FindFirstChild("Criminals Spawn"):FindFirstChild("SpawnLocation") then
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Tiger Admin",Text = "Criminals spawn not found! Please rejoin.",Duration = 10,})
-end
 game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 if game:FindFirstChild("Tiger_revamp_loaded") then  ((getgenv and getgenv()) or _G).NotifTiger("Tiger admin is already executed!",false) return warn("Already loaded") end
 local Player, plr,Folder = game:GetService("Players").LocalPlayer, game:GetService("Players").LocalPlayer,Instance.new("Folder",game)
@@ -14,8 +11,7 @@ local HasGamepass,UserInputService = game:GetService("MarketplaceService"):UserO
 local GlobalVar = ((getgenv and getgenv()) or _G)
 local Unloaded = false
 local CriminalCFRAME = workspace["Criminals Spawn"].SpawnLocation.CFrame
-local API_Prem = loadstring(game:HttpGet("https://raw.githubusercontent.com/dalloc2/Roblox/main/Listing.lua"))()
-local PremiumActivated = true
+
 
 local Temp = {}
 local API = {}
