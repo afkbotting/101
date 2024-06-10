@@ -11,7 +11,7 @@ animationTrack:Play()
 end
 local player = game.Players.LocalPlayer
 game.Workspace.EffectStorage.ChildAdded:Connect(function(v)
-if v:IsA("BasePart") and distance(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v) <= 10 then
+if v:IsA("BasePart") and distance(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v) <= 13.5 then
 run()
 end
 end)
