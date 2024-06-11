@@ -20,8 +20,10 @@ end
 end
 local player = game.Players.LocalPlayer
 game.ReplicatedStorage.VA.TargetPlayer.Changed:Connect(function()
-if lastchange.Name == player.Name and lastchange ~= nil then
+if lastchange ~= nil then
+if lastchange.Name == player.Name then
 run()
+end
 end
 lastchange = game.ReplicatedStorage.VA.TargetPlayer.Value
 end)
