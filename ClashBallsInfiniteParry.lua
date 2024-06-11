@@ -1,5 +1,5 @@
 local lastanim = nil
-local lastchange = nil
+local lastchange = game.ReplicatedStorage.VA.TargetPlayer.Value
 local anims = {"rbxassetid://14948120460","rbxassetid://14948115850","rbxassetid://14956791372","rbxassetid://14956788249","rbxassetid://14956777030"}
 function distance(x,y)
 return (x.Position - y.Position).Magnitude
