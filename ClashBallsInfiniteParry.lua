@@ -22,11 +22,6 @@ local player = game.Players.LocalPlayer
 game.ReplicatedStorage.VA.TargetPlayer.Changed:Connect(function()
 if lastchange.Name == player.Name and lastchange ~= nil then
 run()
-else
-if lastchange ~= nil then
-print("Before: "..lastchange.Name)
-print("Now: "..game.ReplicatedStorage.VA.TargetPlayer.Value.Name)
-end
 end
 lastchange = game.ReplicatedStorage.VA.TargetPlayer.Value
 end)
