@@ -27,8 +27,7 @@ end
 end
 lastchange = game.ReplicatedStorage.VA.TargetPlayer.Value
 end)
-while true do
+while task.wait() do
 game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("BattingEvent"):FireServer(false)
 game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("BattingEvent"):FireServer(true)
-wait()
 end
