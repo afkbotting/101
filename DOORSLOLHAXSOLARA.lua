@@ -1,5 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Low End PC ERROR: Solara", -- Required
-	Text = "Ошибка, ваш ПК слишком слаб для использования чита.", -- Required
-	Duration = 99999
+	Title = "Загрузка Чита..", -- Required
+	Text = "#1 Чит на русском языке.", -- Required
+	Duration = 20
 })
+wait(20)
