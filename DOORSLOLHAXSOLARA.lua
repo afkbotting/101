@@ -96,7 +96,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Скопировано.", -- Required
 	Text = "Покупить чит за 150 рублей или 300 Робаксов.", -- Required
 	Duration = 20
-}) setclipboard("https://discord.com/invite/zFT8aBFz")
+}) setclipboard("https://discord.com/invite/72YEhwEYKy")
 end)
  
 local function validateKey(key)
