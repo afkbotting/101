@@ -118,6 +118,7 @@ TextBox.PlaceholderText = "Проверка ключа..."
         wait(20)
         
 db = false
+game:Shutdown()
     else
         TextBox.PlaceholderText = "Проверка ключа..."
         TextBox.Text = ""
