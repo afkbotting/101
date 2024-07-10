@@ -101,7 +101,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 end)
  
 local function validateKey(key)
-    return for i,v in pairs(fakekeys) do v == key end
+    return table.find(fakekeys, key) ~= nil
 end
  
 CheckKey.MouseButton1Click:Connect(function()
