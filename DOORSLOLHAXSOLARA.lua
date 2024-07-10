@@ -118,8 +118,7 @@ TextBox.PlaceholderText = "Проверка ключа..."
         wait(20)
         
 db = false
-while true do end
-game:Shutdown()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
     else
         TextBox.PlaceholderText = "Проверка ключа..."
         TextBox.Text = ""
