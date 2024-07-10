@@ -106,11 +106,11 @@ end
 CheckKey.MouseButton1Click:Connect(function()
     local enteredKey = TextBox.Text
     if validateKey(enteredKey) then
-        TextBox.PlaceholderText = "Correct Key!"
+        TextBox.PlaceholderText = "Ключ уже занят другим пользователем."
         TextBox.Text = ""
-        wait(1)
-        ScreenGui:Destroy()
- 
+        wait(2)
+        TextBox.PlaceholderText = "Введите Ключ..."
+        TextBox.Text = ""
     else
         TextBox.PlaceholderText = "Проверка ключа..."
         TextBox.Text = ""
