@@ -1,3 +1,4 @@
+local db = false
 local fakekeys = {"UEHEI77JSHEKI", "test", "test2"}
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Загрузка Чита..", -- Required
@@ -106,19 +107,26 @@ end
  
 CheckKey.MouseButton1Click:Connect(function()
     local enteredKey = TextBox.Text
+if db == true then return end
+db = true
     if validateKey(enteredKey) then
+TextBox.PlaceholderText = "Проверка ключа..."
+        TextBox.Text = ""
+        wait(5)
         TextBox.PlaceholderText = "Ключ уже занят другим пользователем."
         TextBox.Text = ""
         wait(2)
         TextBox.PlaceholderText = "Введите Ключ..."
         TextBox.Text = ""
+db = false
     else
         TextBox.PlaceholderText = "Проверка ключа..."
         TextBox.Text = ""
         wait(5)
         TextBox.PlaceholderText = "Ключ неправильный."
-wait(1)
+wait(2)
         TextBox.PlaceholderText = "Введите Ключ..."
         TextBox.Text = ""
+db = false
     end
 end)
