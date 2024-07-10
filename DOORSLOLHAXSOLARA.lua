@@ -1,4 +1,4 @@
-local db = false
+ local db = false
 local fakekeys = {"UEHEI77JSHEKI", "test", "test2"}
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Загрузка Чита..", -- Required
