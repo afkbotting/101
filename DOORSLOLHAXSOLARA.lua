@@ -1,5 +1,5 @@
  local db = false
-local fakekeys = {"UEHEI77JSHEKI", "test", "test2"}
+local fakekeys = {"URUGJ837BEUEUJ", "UIHHSJUWIIhhuU"}
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Загрузка Чита..", -- Required
 	Text = "#1 Чит на русском языке.", -- Required
@@ -113,11 +113,10 @@ db = true
 TextBox.PlaceholderText = "Проверка ключа..."
         TextBox.Text = ""
         wait(5)
-        TextBox.PlaceholderText = "Ключ уже занят другим пользователем."
+        TextBox.PlaceholderText = "Ключ правильный. Загрузка..."
         TextBox.Text = ""
-        wait(2)
-        TextBox.PlaceholderText = "Введите Ключ..."
-        TextBox.Text = ""
+        wait(20)
+        
 db = false
     else
         TextBox.PlaceholderText = "Проверка ключа..."
