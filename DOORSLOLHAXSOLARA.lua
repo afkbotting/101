@@ -1,3 +1,4 @@
+local fakekeys = {"UEHEI77JSHEKI", "test", "test2"}
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Загрузка Чита..", -- Required
 	Text = "#1 Чит на русском языке.", -- Required
@@ -100,7 +101,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 end)
  
 local function validateKey(key)
-    return key == "hwHeh866!#8UDHS" -- Replace this with your key
+    return for i,v in pairs(fakekeys) do v == key end
 end
  
 CheckKey.MouseButton1Click:Connect(function()
